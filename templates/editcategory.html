@@ -1,11 +1,10 @@
-{% extends 'base.html' %} 
+{% ext{% extends 'base.html'%}
 
 {% block content %}
 <h3>Edit Category</h3>
 <div class="row">
-<!-- ----------------------SUBMIT BUTTON---------------------------- --->
-      <form action="{{url_for('update_category', category_id=category._id) }}" method="POST" class="col s12">
-         <div class="row">
+    <form action="{{ url_for('update_category', category_id=category._id) }}" method="POST" class="col s12">
+        <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">poll</i>
                 <input id="category_name" name="category_name" type="text" class="validate" value="{{category.category_name}}">
@@ -22,5 +21,4 @@
         </div>
     </form>
 </div>
-
 {% endblock %}
